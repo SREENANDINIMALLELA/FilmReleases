@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import FilmList from "../components/FilmList"
+import './FilmReleases.css'
 class FilmReleases extends Component {
   constructor(props) {
     super(props);
@@ -46,7 +47,7 @@ render() {
   return (
     <div className="film-releases">
       <FilmList data = {this.state.data}/>
-      <button onClick ={this.upcomingRelease}>View more upcoming releases</button>
+      <button className = "button" onClick ={this.upcomingRelease}><h1>View more upcoming releases</h1></button>
     </div>
   );
 }
