@@ -29,16 +29,24 @@ class FilmReleases extends Component {
     name: "Captain Marvel",
     url: "https://www.imdb.com/title/tt4154664/?ref_=rlm"
   }
-]
-  };
+],
 
+  };
+this.upcomingRelease= this.upcomingRelease.bind(this)
+
+  }
+
+  upcomingRelease(){
+
+    const url = 'https://www.imdb.com/calendar/?region=gb';
+    window.open(url, '_blank');
   }
 
 render() {
   return (
     <div className="film-releases">
       <FilmList data = {this.state.data}/>
-      <button>View more upcoming releases</button>
+      <button onClick ={this.upcomingRelease}>View more upcoming releases</button>
     </div>
   );
 }
